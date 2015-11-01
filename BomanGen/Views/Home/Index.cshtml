@@ -1,0 +1,457 @@
+﻿@{
+    ViewBag.Title = " BomanClan Home Page";
+}
+
+@*@section featured {
+        <section class="featured">
+            <div class="content-wrapper">
+                <hgroup class="title">
+                    <h1>@ViewBag.Title.</h1>
+                    <h2>@ViewBag.Message</h2>
+                </hgroup>
+                <p>
+                    To learn more about ASP.NET MVC visit
+                    <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>.
+                    The page features <mark>videos, tutorials, and samples</mark> to help you get the most from ASP.NET MVC.
+                    If you have any questions about ASP.NET MVC visit
+                    <a href="http://forums.asp.net/1146.aspx/1?MVC" title="ASP.NET MVC Forum">our forums</a>.
+                </p>
+            </div>
+        </section>
+    } *@
+
+<!-- basic html comment
+<h3>We suggest the following:</h3>
+<ol class="round">
+    <li class="one">
+        <h5>Getting Started</h5>
+        ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+        enables a clean separation of concerns and that gives you full control over markup
+        for enjoyable, agile development. ASP.NET MVC includes many features that enable
+        fast, TDD-friendly development for creating sophisticated applications that use
+        the latest web standards.
+        <a href="http://go.microsoft.com/fwlink/?LinkId=245151">Learn more…</a>
+    </li>
+
+    <li class="two">
+        <h5>Add NuGet packages and jump-start your coding</h5>
+        NuGet makes it easy to install and update free libraries and tools.
+        <a href="http://go.microsoft.com/fwlink/?LinkId=245153">Learn more…</a>
+    </li>
+
+    <li class="three">
+        <h5>Find Web Hosting</h5>
+        You can easily find a web hosting company that offers the right mix of features
+        and price for your applications.
+        <a href="http://go.microsoft.com/fwlink/?LinkId=245157">Learn more…</a>
+    </li>
+</ol>
+-->
+
+
+ @*<br />
+    Begin Chart
+<p>
+    begin par.
+    @Html.ActionLink("testLink", "Person", "Home")
+    end par.
+</p>*@
+
+
+
+
+@section PageHeader {
+<div class="wrapper col2" style="background-color: #000000;">
+    <div id="header" class="clear">
+        <div class="fl_left">
+            <br />
+            <h1> @Html.ActionLink("Boman Whelehon Site", "Tree", "Home", new { @style = "background-color:black;color:#BF8200;font-weight:bold;" })</h1>
+            @*<h1 style="background-color: #000;color:#BF8200;font-weight:bold"> @Html.ActionLink("Boman Whelehon site", "Index", "Home") </h1>*@
+            @*<h1 style=""><a href="~/modern-business/index.html" style="background-color: #000;color:#BF8200;font-weight:bold">Boman Whelehon site</a></h1>*@
+            <p style="font-size: 10px;">&nbsp;</p>
+        </div>
+        <div id="topnav" style="font-size: 24px;">
+            <ul style="line-height: 150%;">
+                <li> @Html.ActionLink("Home", "Index", "Home")</li>
+                @*<li> @Html.ActionLink("Change Password", "PasswordChange", "Account")</li>*@
+                @*<li class="active"><a href="../../main/modern-business/index.html">Home</a><span>&nbsp;</span></li>*@
+                <li>@Html.ActionLink("Whelehon Side", "Tree", "Home", new { topOfTree = "Permaness Lovelace" }, null)</li>
+                <li>@Html.ActionLink("Boman Side", "Tree", "Home", new { topOfTree = "William T. Boman" }, null)</li>
+
+                <li>
+                    <a href="#"> (work in progress)</a>
+                    <ul>
+                        <li><a href="#">Movies</a></li>
+                        <li><a href="#">Documents</a></li>
+                        <li><a href="#">Artifacts</a></li>
+                    </ul>
+                </li>
+
+                <li class="last"><a href="#">Contact Us </a><span> </span>&nbsp;</li>
+                @*<li class="last">@Html.ActionLink("Person", "Person", "Home")</li>*@
+            </ul>
+        </div>
+    </div>
+    }
+    <br class="clear" />
+</div>
+
+</div>
+
+
+
+
+<!-- ####################################################################################################### -->
+<!--
+<div class="wrapper col2">
+  <div id="header" class="clear">
+    <div class="fl_left">
+      <h1 ><a style="color:Firebrick;font-weight:bold" href="../index.html">Cats 2nd On The Wild Side</a></h1>
+    </div>
+    <div id="topnav">
+      <ul>
+        <li><a href="#">Contact Us</a><span>Test Text Here</span></li>
+        <li><a href="#">About Us</a><span>Test Text Here</span></li>
+        <li><a href="/wildside/modern-business/index.html">Home</a><span>Test Text Here</span></li>
+        <li class="active last"><a href="wildside/modern-business/../../index.html">Kittens</a><span>Test Text Here</span></li>
+        </ul>
+    </div>
+  </div>
+</div>
+-->
+<!-- ####################################################################################################### -->
+<!-- #######################################################################################################
+<div class="wrapper col2">
+  <div id="topbar">  -->
+<!--
+<div id="topnav">
+  <ul>
+    <li class="active"><a href="../../wildside/modern-business/index.html">Home</a></li>
+    <li><a href="#">About Us </a></li>
+
+    <li><a href="#"></a>
+      <ul>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 2</a></li>
+        <li><a href="#">Link 3</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Contact Us </a></li>
+    <li class="last"><a href="../../wildside/photoprowess/pages/gallery.html">Kittens</a></li>
+  </ul>
+</div>
+-->
+<!--   <div id="search">
+     <form action="#" method="post">
+       <fieldset>
+         <legend>Site Search</legend>
+         <input type="text" value="Search Our Website&hellip;"  onfocus="this.value=(this.value=='Search Our Website&hellip;')? '' : this.value ;" />
+         <input type="submit" name="go" id="go" value="Search" />
+       </fieldset>
+     </form>
+   </div>  -->
+<br class="clear" />
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col3">
+    <div id="featured_slide">
+        <div id="slider" class="nivoSlider">
+            <img src="~/modern-business/images/demo/Whelehons.jpg"  alt="alt text" />
+            <img src="~/modern-business/images/demo/background-birthday-2.jpg" alt="alt text" />
+            @*<img src="~/modern-business/images/demo/2.gif" alt="alt text" />*@
+            <img src="~/modern-business/images/demo/google_image_search_johnny_clem.png" alt="alt text" />
+            <img src="~/modern-business/images/demo/3.gif" alt="alt text" />
+            @*<img src="~/modern-business/images/demo/4.gif" alt="alt text" />*@
+            @*<img src="~/modern-business/images/demo/8.jpg" alt="alt text" />*@
+            <!--  <img src="images/demo/9.jpg" alt="" /> -->
+            @*<img src="~/modern-business/images/demo/7.jpg" alt="alt text" />*@
+            @*<img src="~/modern-business/images/demo/10.jpg" alt="alt text" />*@
+            <!--  <img src="images/demo/5.jpg" alt="" /> -->
+        </div>
+    </div>
+    <div id="featured_intro">
+        <div>
+            <p style="background-color: #6A737C;color:black;font-weight:bold;font-size:medium;">
+                Hello!  Would anyone be interested in helping improve this portion of the site by phrasing a site summary?      
+
+                A starting point might be to google up existing family genealogy sites in order to inspire ideas.  Or feel free to work with another person or persons then bounce your ideas around via email we agree what text to place here.   </a>.
+            </p>
+        </div>
+    </div>
+</div>
+<!-- ####################################################################################################### -->
+<!--
+<div class="wrapper col4">
+  <div id="latest">
+    <ul>
+      <li>
+        <h2>Indonectetus facilis leo nibh</h2>
+        <p class="imgholder"><img src="images/demo/290x100.gif" alt="" /></p>
+        <p>Nullamlacus dui ipsum conseqlo bo rttis non euisque morbipen asda pibulum orna. <a href="#">More &raquo;</a></p>
+      </li>
+      <li>
+        <h2>Indonectetus facilis leo nibh</h2>
+        <p class="imgholder"><img src="images/demo/31.jpg" alt="" /></p>
+        <p>Nullamlacus dui ipsum conseqlo bo rttis non euisque morbipen asda pibulum orna. <a href="#">More &raquo;</a></p>
+      </li>
+      <li class="last">
+        <h2>Indonectetus facilis leo nibh</h2>
+        <p class="imgholder"><img src="images/demo/290x100.gif" alt="" /></p>
+        <p>Nullamlacus dui ipsum conseqlo bo rttis non euisque morbipen asda pibulum orna. <a href="#">More &raquo;</a></p>
+      </li>
+    </ul>
+    <br class="clear" />
+  </div>
+</div>
+-->
+<!-- ####################################################################################################### -->
+<!--
+<div class="wrapper col5">
+  <div id="footer">
+    <div class="footbox">
+      <h2>Lacus interdum</h2>
+      <p>Elitpha sellus enim rutrum orna ac met quis risus sus sed metus. Ipsumm aecenas sempor tincidunt feugiat tur aenec a integet rhoncus eger et. Semnisse fauctor in ut convalli citudin vivamus curabitur tinci dunt nam vestique pretium.</p>
+    </div>
+    <div class="footbox">
+      <h2>Lacus interdum</h2>
+      <ul>
+        <li><a href="#">Lorem ipsum dolor</a></li>
+        <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+        <li><a href="#">Praesent et eros</a></li>
+        <li><a href="#">Praesent et eros</a></li>
+        <li><a href="#">Lorem ipsum dolor</a></li>
+        <li><a href="#">Suspendisse in neque</a></li>
+        <li><a href="#">Phasellus tempor vestibulum</a></li>
+        <li><a href="#">Vestibulum quis augu mauris</a></li>
+        <li class="last"><a href="#">Suspendisse in neque</a></li>
+      </ul>
+    </div>
+    <div class="footbox last">
+      <h2>Lacus interdum</h2>
+      <ul>
+        <li><a href="#">Lorem ipsum dolor</a></li>
+        <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+        <li><a href="#">Praesent et eros</a></li>
+        <li><a href="#">Praesent et eros</a></li>
+        <li><a href="#">Lorem ipsum dolor</a></li>
+        <li><a href="#">Suspendisse in neque</a></li>
+        <li><a href="#">Phasellus tempor vestibulum</a></li>
+        <li><a href="#">Vestibulum quis augu mauris</a></li>
+        <li class="last"><a href="#">Suspendisse in neque</a></li>
+      </ul>
+    </div>
+    <div class="thumbbox">
+      <h2>Lacus interdum</h2>
+      <ul>
+        <li><a href="#"><img src="images/demo/80x80.gif" alt="" /></a></li>
+        <li><a href="#"><img src="images/demo/80x80.gif" alt="" /></a></li>
+        <li class="last"><a href="#"><img src="images/demo/80x80.gif" alt="" /></a></li>
+        <li><a href="#"><img src="images/demo/80x80.gif" alt="" /></a></li>
+        <li><a href="#"><img src="images/demo/80x80.gif" alt="" /></a></li>
+        <li class="last"><a href="#"><img src="images/demo/80x80.gif" alt="" /></a></li>
+      </ul>
+      <br class="clear" />
+    </div>
+    <br class="clear" />
+  </div>
+</div>  -->
+<!-- ####################################################################################################### -->
+<div class="wrapper col6">
+    <div id="copyright">
+        <p class="fl_left">Site design by Joe Boman 2015 - ASP.Net, MVC4, SQL Server / Linq, Razor markup Engine, HTML, CSS  <a href="#">BomanClan.com</a></p>
+        <!--	<p class="fl_left">Copyright &copy; 2014 - All Rights Reserved - <a href="#">CatsOnTheWildSide.com</a></p> -->
+        <!--   <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>  -->
+        <br class="clear" />
+    </div>
+</div>
+
+
+
+
+<p>
+    @ViewBag.AnotherTree
+</p>
+
+ @Html.Raw(@ViewBag.BuildTree)
+
+@*<h4>
+    @ViewBag.BuildTree  
+</h4>*@
+
+@*<div class="tree">
+    <ul>
+        <li>
+            <a href="#">Joseph C Boman / Marilyn Whelehan</a>
+            <ul>
+                <li>
+                    <a href="#">Jean</a>
+                    <ul>
+                        <li><a href="#">Kristen</a></li>
+                        <li>
+                            <a href="#">Allie</a>
+                            <ul>
+                                <li>
+                                    <a href="#">Ava</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#">Mary</a>
+                    <ul>
+                        <li>
+                            <a href="#">Teresa</a>
+                            <ul>
+                                <li>
+                                    <a href="#">Cora</a>
+                                </li>
+                                <li>
+                                    <a style="color: red;" target="blank" href="http://www.bomanclan.com/wildside/photoprowess/pages/gallery.html#prettyPhoto">Leta A. Person</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+             </ul>
+        </li>
+    </ul>
+</div>*@
+
+
+@*<div class="tree">
+    <ul>
+        <li>
+            <a href="#">Joseph C Boman / Marilyn Whelehan</a>
+            <ul>
+                <li>
+                    <a href="#">Ellen</a>
+                    <ul>
+                        <li><a href="#">Shellie</a></li>
+                        <li>
+                            <a href="#">Scott</a>
+                            <ul>
+                                <li>
+                                    <a href="#">Josie</a>
+                                </li>
+                                <li>
+                                    <a href="#">Julia</a>
+                                </li>
+                                <li>
+                                    <a href="#">Seth</a>
+                                </li>
+                                <li>
+                                    <a href="#">Emma</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Jean</a>
+                    <ul>
+                        <li><a href="#">Kristen</a></li>
+                        <li>
+                            <a href="#">Allie</a>
+                            <ul>
+                                <li>
+                                    <a href="#">Ava</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Sue</a>
+                    <ul>
+                        <li>
+                            <a href="#">Jayden</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Joe</a>
+                </li>*@
+
+
+
+                <!--
+                                <li>
+                                    <a href="#"><pre style="display: block;font-family: monospace;white-space: pre;margin: 1em 0;width: 210px;">Joseph C. Boman jr. <br />born: 7/23/1959 <br />testing Multi-<br />line entry
+                                                </pre>	</a>
+                                </li>
+                -->
+
+
+
+                @*<li>
+                    <a href="#">Mary</a>
+                    <ul>
+                        <li>
+                            <a href="#">Teresa</a>
+                            <ul>
+                                <li>
+                                    <a href="#">Cora</a>
+                                </li>
+                                <li>
+                                    <a style="color: red;" target="blank" href="http://www.bomanclan.com/wildside/photoprowess/pages/gallery.html#prettyPhoto">Leta A. Person</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Lynn</a>
+                    <ul>
+                        <li>
+                            <a href="#">Michael jr</a>
+                        </li>
+                        <li>
+                            <a href="#">Haley</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>*@
+
+
+
+@section extraLinks {
+
+
+    <link rel="stylesheet" href="~/modern-business/layout/styles/layout.css" type="text/css" />
+    <script type="text/javascript" src="~/modern-business/layout/scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="~/modern-business/layout/scripts/jquery.nivo.slider.pack.js"></script>
+    <script type="text/javascript">
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                effect: 'random', //Specify sets like: 'fold,fade,sliceDown'
+                slices: 10,
+                animSpeed: 500,
+                pauseTime: 5000,
+                startSlide: 0, //Set starting Slide (0 index)
+                directionNav: true, //Next & Prev
+                directionNavHide: true, //Only show on hover
+                controlNav: true, //1,2,3...
+                controlNavThumbs: false, //Use thumbnails for Control Nav
+                controlNavThumbsFromRel: false, //Use image rel for thumbs
+                controlNavThumbsSearch: '.gif', //Replace this with...
+                controlNavThumbsReplace: '_thumb.gif', //...this in thumb Image src
+                keyboardNav: true, //Use left & right arrows
+                pauseOnHover: true, //Stop animation while hovering
+                manualAdvance: false, //Force manual transitions
+                captionOpacity: 0.8 //Universal caption opacity
+            });
+        });
+    </script>
+
+    @*<link rel="stylesheet" href="~/Content/myTree.css" type="text/css" />*@
+
+    
+        @*<link rel="stylesheet" href="~/Scripts/fancybox/jquery.fancybox-1.3.2.css" type="text/css" />*@
+
+}

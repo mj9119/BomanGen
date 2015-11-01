@@ -1,0 +1,236 @@
+﻿@{
+    ViewBag.Title = "Tree";
+}
+
+<div class="wrapper col2">
+    <div id="header" class="clear">
+        <div class="fl_left">
+            @*<h1><a style="background-color:black;color:#BF8200;font-weight:bold" href="../index.html">Boman Whelehon site</a></h1>*@
+            <h1> @Html.ActionLink("Boman Whelehon Site", "Tree", "Home", new { @style = "background-color:black;color:#BF8200;font-weight:bold;" })</h1>
+        </div>
+        <br /><br /><br /> <br />
+        <div id="topnav" style="float:left;">
+            <ul>
+                <li><a href="#">Contact Us </a><span> </span>&nbsp;</li>                
+                @*<li class="active"><a href="../../main/modern-business/index.html">Home</a><span>&nbsp;</span></li>*@    
+                <li>
+                    <a href="#"> (work in progress)</a>
+                    <ul>
+                        <li><a href="#">Movies</a></li>
+                        <li><a href="#">Documents</a></li>
+                        <li><a href="#">Artifacts</a></li>
+                    </ul>
+                </li>
+                <li>@Html.ActionLink("Boman Side", "Tree", "Home", new { topOfTree = "William T. Boman" }, null)</li>
+                <li>@Html.ActionLink("Whelehon Side", "Tree", "Home", new { topOfTree = "Permaness Lovelace" }, null)</li>
+                <li> @Html.ActionLink("Home", "Index", "Home")</li>
+                @*<li class="last">@Html.ActionLink("Person", "Person", "Home")</li>*@
+            </ul>
+        </div>
+    </div>
+</div>
+<h2> </h2> <!-- This H2 tag is nothing more than a placeholder-->
+
+
+
+
+@*@Html.Raw(@ViewBag.BuildTree)*@
+
+
+
+<!--          <h1><a href="c:\\wildside\\modern-business\\index.html" style="color:FireBrick;font-weight:bold">Cats On the Wild Side</a></h1> -->
+<!--		  <h1><a href="index.html" style="color:FireBrick;font-weight:bold">Cats On the Wild Side</a></h1> -->
+<!--   <div class="fl_right"><a href="#"><img src="images/demo/468x60.gif" alt="" /></a></div>  -->
+@*<br class="clear" />*@
+
+
+<!-- ####################################################################################################### -->
+@*<div class="wrapper col3">
+
+   <!-- <div id="featured_intro"> -->
+        <div>
+            ghjk
+                <div style="background-color: #6A737C; color: black; font-weight: bold; font-size: medium; border-style: solid; border-width: 5px; ">
+                    <div>
+                        @Html.Raw(@ViewBag.BuildTree)
+                        <br />
+                    </div>
+                </div>
+            
+        </div>
+    <!-- </div> -->
+</div>*@
+<!-- ####################################################################################################### -->
+
+
+    <!-- ####################################################################################################### -->
+
+<div class="wrapper col4">
+    <div id="container" class="clear" style="width: 800px;">
+
+        <!-- ####################################################################################################### -->
+        <!--
+            <div id=" shout" class="clear">
+            <div class="fl_left">
+                <h2>Need A Professional Photographer ?</h2>
+                <p>Why not try our services today, you won't regret your choice !</p>
+            </div>
+            <p class="fl_right"><a href="#contact">Contact Us Today</a></p>
+        </div>
+            -->
+        <!-- ####################################################################################################### -->
+
+        <h1 style="background-color: #6A737C;color:Firebrick;font-weight:bold;text-align: center;font-size:250%;">@ViewBag.Message</h1>
+        <div style="border: 2px solid black; width: 900px; height:auto; overflow: auto">
+            <div style="border: 2px solid black; padding: 25px; width: 3200px; height: auto; overflow: auto">
+                <p style="color:black; font-weight: bold; text-align: center; font-size: medium;">  @Html.Raw(@ViewBag.BuildTree) </p>
+            </div>
+        </div>
+
+        <div class="gallery clear">
+            test 1 2 3
+        </div>
+
+        @*<li class="first"><a href="~/photoprowess/images/demo/gallery/174x150.gif" rel="prettyPhoto[gallery1]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>
+             <li class="first"><a href="~/photoprowess/images/demo/gallery/174x150.gif"    rel="prettyPhoto[gallery1]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>
+             <li class="first"><a href="~/photoprowess/images/demo/gallery/174x150.gif"    rel="prettyPhoto[gallery1]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>
+             <li class="first"><a href="~/photoprowess/images/demo/gallery/174x150.gif" rel="prettyPhoto[gallery1]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>
+             <li class="first"><a href="~/photoprowess/images/demo/gallery/174x150.gif" rel="prettyPhoto[gallery1]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>
+             <li class="first"><a href="~/photoprowess/images/demo/gallery/174x150.gif" rel="prettyPhoto[gallery1]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>
+             <li class="first"><a href="~/photoprowess/images/demo/gallery/174x150.gif"    rel="prettyPhoto[gallery1]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>
+             <li class="first"><a href="~/photoprowess/images/demo/gallery/174x150.gif"    rel="prettyPhoto[gallery1]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>
+             <li><a href="~/photoprowess/images/demo/gallery/174x150.gif"    rel="prettyPhoto[gallery1]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>
+            <li><a href="~/photoprowess/images/demo/gallery/174x150.gif"    rel="prettyPhoto[gallery1]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>
+            <li class="first"><a href="~/photoprowess/images/demo/gallery/174x150.gif" rel="prettyPhoto[gallery1]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>
+            <li><a href="~/photoprowess/images/demo/gallery/174x150.gif"    rel="prettyPhoto[gallery1]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>
+            <li><a href="~/photoprowess/images/demo/gallery/174x150.gif"    rel="prettyPhoto[gallery1]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>
+            <li><a href="~/photoprowess/images/demo/gallery/174x150.gif"    rel="prettyPhoto[gallery1]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>
+            <li><a href="~/photoprowess/images/demo/gallery/174x150.gif"    rel="prettyPhoto[gallery1]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>*@
+
+
+
+        @*<li><a href="~/photoprowess/images/demo/gallery/NotGrandma.jpg" rel="prettyPhoto[gallery1]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/NotGrandma.jpg" alt="photo of Leta." /></a></li>*@
+
+        @*<li><a href="~/photoprowess/images/demo/gallery/3.jpg" rel="prettyPhoto[gallery1]" title="Leta"><img src="~/photoprowess/images/demo/gallery/3.jpg" alt="Leta" /></a></li>
+            <li><a href="~/photoprowess/images/demo/gallery/11.jpg" rel="prettyPhoto[gallery1]" title="Leta"><img src="~/photoprowess/images/demo/gallery/11.jpg" alt="Leta" /></a></li>
+            <li><a href="~/photoprowess/images/demo/gallery/12.jpg" rel="prettyPhoto[gallery1]" title="Leta"><img src="~/photoprowess/images/demo/gallery/12.jpg" alt="Leta" /></a></li>*@
+
+        <!--
+        <li class="first"><a href="../images/demo/gallery/572x330.gif" rel="prettyPhoto[gallery1]" title="Image 5"><img src="../images/demo/gallery/174x150.gif" alt="Title Text" /></a></li>
+        <li><a href="../images/demo/gallery/572x330.gif" rel="prettyPhoto[gallery1]" title="Image 6"><img src="../images/demo/gallery/174x150.gif" alt="Title Text" /></a></li>
+        <li><a href="../images/demo/gallery/572x330.gif" rel="prettyPhoto[gallery1]" title="Image 7"><img src="../images/demo/gallery/174x150.gif" alt="Title Text" /></a></li>
+        <li><a href="../images/demo/gallery/572x330.gif" rel="prettyPhoto[gallery1]" title="Image 8"><img src="../images/demo/gallery/174x150.gif" alt="Title Text" /></a></li>
+        <li><a href="../images/demo/gallery/572x330.gif" rel="prettyPhoto[gallery1]" title="Image 9"><img src="../images/demo/gallery/174x150.gif" alt="Title Text" /></a></li>
+        -->
+        @*<p style="color:black;font-weight:bold;text-align: center;font-size:medium;"> Include a Person description here for @ViewBag.Person @ViewBag.Description </p>*@
+
+        <!--
+        <li class="first"><a href="../images/demo/gallery/572x330.gif" rel="prettyPhoto[gallery1]" title="Image 10"><img src="../images/demo/gallery/174x150.gif" alt="Title Text" /></a></li>
+        <li><a href="../images/demo/gallery/572x330.gif" rel="prettyPhoto[gallery1]" title="Image 11"><img src="../images/demo/gallery/174x150.gif" alt="Title Text" /></a></li>
+        <li><a href="../images/demo/gallery/572x330.gif" rel="prettyPhoto[gallery1]" title="Image 12"><img src="../images/demo/gallery/174x150.gif" alt="Title Text" /></a></li>
+        <li><a href="../images/demo/gallery/572x330.gif" rel="prettyPhoto[gallery1]" title="Image 13"><img src="../images/demo/gallery/174x150.gif" alt="Title Text" /></a></li>
+        <li><a href="../images/demo/gallery/572x330.gif" rel="prettyPhoto[gallery1]" title="Image 14"><img src="../images/demo/gallery/174x150.gif" alt="Title Text" /></a></li>
+        -->
+        @*</ul>*@
+
+
+
+        <!-- ####################################################################################################### -->
+        <!--
+        <div class="pagination">
+          <ul>
+            <li class="prev"><a href="#">&laquo; Previous</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li class="splitter">&hellip;</li>
+            <li><a href="#">6</a></li>
+            <li class="current">7</li>
+            <li><a href="#">8</a></li>
+            <li><a href="#">9</a></li>
+            <li class="splitter">&hellip;</li>
+            <li><a href="#">14</a></li>
+            <li><a href="#">15</a></li>
+            <li class="next"><a href="#">Next &raquo;</a></li>
+          </ul>
+        </div>
+        -->
+        <!-- ####################################################################################################### -->
+        <div class="clear"> </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+@*<h2>Tree (proof of concept only -- Click a person's name -- still needs headings, menus, footers etc)</h2>
+
+@Html.Raw(@ViewBag.BuildTree)*@
+
+<br />
+<div class="wrapper col6">
+    <div id="copyright">
+        <p class="fl_left">Site design by Joe Boman 2015 - ASP.Net, MVC4, SQL Server / LINQ, Razor Server side markup, HTML, CSS  <a href="#">BomanClan.com</a></p>
+        <!--	<p class="fl_left">Copyright &copy; 2014 - All Rights Reserved - <a href="#">CatsOnTheWildSide.com</a></p> -->
+        <!--   <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>  -->
+        <br class="clear" />
+    </div>
+</div>
+
+
+
+
+@section extraLinks {
+<link rel="stylesheet" href="~/Content/myTree.css" type="text/css" />
+    <link rel="stylesheet" href="~/photoprowess/layout/styles/layout.css" type="text/css" />
+    <script type="text/javascript" src="~/photoprowess/layout/scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="~/photoprowess/layout/scripts/jquery.ui.min.js"></script>
+    <script type="text/javascript" src="~/photoprowess/layout/scripts/jquery.defaultvalue.js"></script>
+    <script type="text/javascript" src="~/photoprowess/layout/scripts/jquery.scrollTo-min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#fullname, #validemail, #message").defaultvalue("Full Name", "Email Address", "Message");
+            $('#shout a').click(function () {
+                var to = $(this).attr('href');
+                $.scrollTo(to, 1200);
+                return false;
+            });
+            $('a.topOfPage').click(function () {
+                $.scrollTo(0, 1200);
+                return false;
+            });
+            $("#tabcontainer").tabs({
+                event: "click"
+            });
+            $("a[rel^='prettyPhoto']").prettyPhoto({
+                theme: 'dark_rounded'
+            });
+        });
+    </script>
+    <!-- prettyPhoto -->
+    <link rel="stylesheet" href="~/photoprowess/layout/scripts/prettyphoto/prettyPhoto.css" type="text/css" />
+    <script type="text/javascript" src="~/photoprowess/layout/scripts/prettyphoto/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("a[rel^='prettyPhoto']").prettyPhoto({
+                theme: 'dark_rounded',
+                overlay_gallery: false,
+                social_tools: false
+            });
+        });
+    </script>
+    <!-- / prettyPhoto -->
+}
+
+@*@section extraLinks {
+
+    <link rel="stylesheet" href="~/Content/myTree.css" type="text/css" />
+
+    <link rel="stylesheet" href="~/modern-business/layout/styles/layout.css" type="text/css" />
+}*@

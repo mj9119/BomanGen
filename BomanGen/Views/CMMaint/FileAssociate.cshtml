@@ -1,0 +1,65 @@
+﻿@model List<BomanGen.Models.ArtifactModel>
+
+@{
+    ViewBag.Title = "Content Management File Associate Screen";
+}
+
+@if (TempData["ReturnData"] != null)
+{
+    var joemodel = TempData["ReturnData"];
+    <h2 class="pettigoat_blue"> @joemodel  </h2>
+}
+else
+{
+    //var joemodel = @:&nbsp;
+    <h3>
+        Use the checkboxes on this screen to associate this photo with a Person or Persons.  
+        Then, click the button at the bottom of the screen to Submit your changes.
+        The photo will then appear when you click on the person on the Family Tree.
+    </h3>
+}
+
+<hr /><hr />
+    <h3>@Session["currentFileProcessed"]</h3>
+    @{string ThumbNailFilePath = "/photoprowess/images/demo/gallery/ThumbSize" + @Session["currentFileProcessed"];}
+    @*ThumbNailFilePath = "/photoprowess/images/demo/gallery/" + @item.FileName;*@
+    @*ThumbNailFilePath = += @Session["myVar"];*@
+    <img src="@ThumbNailFilePath" alt="Photo Missing" width="200" height="200" />
+    
+    <h2>@*The photo above will be associated with the Person or Persons whose boxes you check below.  Click Submit at the bottom of the screen to complete*@</h2>
+
+@using (Html.BeginForm())
+{
+    for (var i = 0; i < Model.Count(); i++)
+    {
+        @Html.HiddenFor(it => it[i].Id)   
+        @Html.HiddenFor(it => it[i].Name)     
+        @Html.CheckBoxFor(it => it[i].IfChecked)
+        @Html.DisplayFor(it => it[i].Name) 
+        <br />
+    }
+    <br />
+    <input id="Submit1" type="submit" value="Submit" />
+}
+
+@section CMHeaderLinks {
+    <hr />
+    <h2>@ViewBag.Title</h2>
+    @Html.ActionLink("Add a new Artifact(photo etc.)", "CreateArtifact", "CMMaint")
+    <br />
+    @Html.ActionLink("Back to Content Management Home Page", "Index")
+    <br />
+    @Html.ActionLink("Site Home Page", "Index", "Home")
+}
+
+@section CMFooterLinks {
+
+    <h6>Content Mgmt. Maintenance Footer:  Additional Links below</h6>
+    <hr />
+    <hr />
+    @Html.ActionLink("Add a new Artifact(photo etc.)", "CreateArtifact", "CMMaint")
+    <br />
+    @Html.ActionLink("Back to Content Management Home Page", "Index")
+    <br />
+    @Html.ActionLink("Site Home Page", "Index", "Home")
+}

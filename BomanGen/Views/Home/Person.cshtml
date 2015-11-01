@@ -1,0 +1,341 @@
+﻿@model IEnumerable<BomanGen.Models.Artifact>
+@*@model IList<BomanGen.Models.Artifact>*@
+
+    @{
+        ViewBag.Title = "Person";
+    //string @myString = <h1>"Mom's Side"</h1>;
+    }
+
+    @section PageHeader {
+
+        <div class="wrapper col2">
+            <div id="header" class="clear">
+                <div class="fl_left">
+                    @*<h1><a style="background-color:black;color:#BF8200;font-weight:bold" href="../index.html">Boman Whelehon site</a></h1>*@
+                    <h1> @Html.ActionLink("Boman Whelehon site", "Tree", "Home", new { @style = "background-color:black;color:#BF8200;font-weight:bold;" })</h1>
+                </div>
+                <br /><br /><br /> <br />
+                <div id="topnav" style="float:left;">
+                    <ul>
+                        
+                        <li><a href="#">Contact Us </a><span> </span>&nbsp;</li>
+                        <li>
+                            <a href="#"> (work in progress)</a>
+                            <ul>
+                                <li><a href="#">Movies</a></li>
+                                <li><a href="#">Documents</a></li>
+                                <li><a href="#">Artifacts</a></li>
+                            </ul>
+                        </li>
+                        <li>@Html.ActionLink("Boman Side", "Tree", "Home", new { topOfTree = "William T. Boman" }, null)</li>
+                        <li>@Html.ActionLink("Whelehon Side", "Tree", "Home", new { topOfTree = "Permaness Lovelace" }, null)</li>
+                        <li> @Html.ActionLink("Home", "Index", "Home")</li>
+                        @*<li class="last">@Html.ActionLink("Person", "Person", "Home")</li>*@
+
+
+                        @*<li class="active last"><a href="#">Contact Us</a><span>&nbsp;</span></li>
+                        <li><a href="#">About Us</a><span>&nbsp;</span></li>
+                        <li>@Html.ActionLink("Mom's Side", "Tree", "Home")</li>
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>*@
+                       
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <h2> </h2> <!-- This H2 tag is nothing more than a placeholder-->
+
+        @*<div class="wrapper col2" style="background-color: #000000;">
+            <div id="header" class="clear">
+                <div class="fl_left">
+                    <br />
+                    <h1 style="background-color: #000;color:#BF8200;font-weight:bold"> @Html.ActionLink("Boman Whelehon site", "Index", "Home") </h1>*@
+        @*<h1 style=""><a href="~/photoprowess/index.html" style="background-color: #000;color:#BF8200;font-weight:bold">Boman Whelehon site</a></h1>*@
+        @*<p style="font-size: 10px;">&nbsp;</p>
+                    </div>
+                    <div id="topnav" style="font-size: 24px;">
+                        <ul style="line-height: 150%;">
+                            <li> @Html.ActionLink("Home", "Index", "Home")</li>
+
+                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+
+                            <li>
+                                <a href="#"></a>
+                                <ul>
+                                    <li><a href="#">Link 1</a></li>
+                                    <li><a href="#">Link 2</a></li>
+                                    <li><a href="#">Link 3</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Contact Us </a><span> </span>&nbsp;</li>
+                            <li class="last">@Html.ActionLink(" Person ", "Person", "Home")</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>*@
+    }
+
+
+    
+
+
+
+
+
+
+
+
+    <!-- ####################################################################################################### -->
+
+    <div class="wrapper col4">
+        <div id="container" class="clear">
+
+            <!-- ####################################################################################################### -->
+            <!--
+            <div id="shout" class="clear">
+              <div class="fl_left">
+                <h2>Need A Professional Photographer ?</h2>
+                <p>Why not try our services today, you won't regret your choice !</p>
+              </div>
+              <p class="fl_right"><a href="#contact">Contact Us Today</a></p>
+            </div>
+            -->
+            <!-- ####################################################################################################### -->
+            <h1 style="background-color: #6A737C;color:Firebrick;font-weight:bold;text-align: center;font-size:250%;">@ViewBag.Person </h1>
+            <p style="color:black;font-weight:bold;text-align: center;font-size:medium;"> Include a description here for Person: @ViewBag.Person @ViewBag.Description </p>
+            <div class="gallery clear">
+                <ul>
+                    @if (Model.Count() == 0)
+                   {
+                        @*<li class="first"><img src="~/photoprowess/images/demo/gallery/572x330.gif" alt="Title Text" /></li>
+                        <li><a href="~/photoprowess/images/demo/gallery/174x150.gif" rel="prettyPhoto[gallery1]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>
+                        <li><a href="~/photoprowess/images/demo/gallery/174x150.gif" rel="prettyPhoto[gallery1]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>
+                        <li><a href="~/photoprowess/images/demo/gallery/174x150.gif" rel="prettyPhoto[gallery1]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>
+                        <li><a href="~/photoprowess/images/demo/gallery/174x150.gif" rel="prettyPhoto[gallery1]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>*@
+                        <li class="first"><a href="~/photoprowess/images/demo/gallery/174x150.gif" rel="prettyPhoto[gallery1]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>
+                        <li><a href="~/photoprowess/images/demo/gallery/174x150.gif" rel="prettyPhoto[gallery1]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>
+                        <li><a href="~/photoprowess/images/demo/gallery/174x150.gif" rel="prettyPhoto[gallery1]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>
+                        <li><a href="~/photoprowess/images/demo/gallery/174x150.gif" rel="prettyPhoto[gallery1]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>
+                        <li><a href="~/photoprowess/images/demo/gallery/174x150.gif" rel="prettyPhoto[gallery1]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>
+                        <li class="first"><a href="~/photoprowess/images/demo/gallery/174x150.gif" rel="prettyPhoto[gallery1]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>
+                        <li><a href="~/photoprowess/images/demo/gallery/174x150.gif" rel="prettyPhoto[gallery1]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>
+                        <li><a href="~/photoprowess/images/demo/gallery/174x150.gif" rel="prettyPhoto[gallery2]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>
+                        <li><a href="~/photoprowess/images/demo/gallery/174x150.gif" rel="prettyPhoto[gallery2]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>
+                        <li><a href="~/photoprowess/images/demo/gallery/174x150.gif" rel="prettyPhoto[gallery2]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>
+                   }
+                    else
+                    {
+                        int i = 0;
+                        string theLIstring = "";
+                        string ThumbNailFile;
+                        string ThumbNailFilePath;
+                        string FullSizeFilePath;
+                        foreach (var item in Model)
+                        {
+                            i++;
+                            if (i == 10000)
+                            {
+                                theLIstring = "first";
+                                FullSizeFilePath = "/photoprowess/images/demo/gallery/" + @item.FileName;
+                                //FullSizeFilePath = "/photoprowess/images/demo/gallery/572x330.gif";
+                                ThumbNailFile = @item.FileName;
+                                ThumbNailFilePath = "/photoprowess/images/demo/gallery/" + ThumbNailFile;
+                                <li class="@theLIstring" style="border-style: solid; border-width: 5px; margin-right: 5px; " ><img src="@FullSizeFilePath" @*width="572" height="330"*@ alt="Title Text" /></li>
+                               theLIstring = "";
+                           }
+                           else
+                           {
+                               FullSizeFilePath = "/photoprowess/images/demo/gallery/" + @item.FileName;
+                               ThumbNailFile = "ThumbSize" + @item.FileName;
+                               ThumbNailFilePath = "/photoprowess/images/demo/gallery/" + ThumbNailFile;
+                               if (i == 1 || i == 6 || i == 11)
+                                   theLIstring = "first";
+                               else
+                                   theLIstring = "";
+                               <li class="@theLIstring"> <a href="@FullSizeFilePath" rel="prettyPhoto[gallery1]" title="@item.Description"><img src="@ThumbNailFilePath" alt="@item.FileName" /></a> </li>
+                           }
+                       }
+                        @*<li class=""><a href="~/photoprowess/images/demo/gallery/174x150.gif" rel="prettyPhoto[gallery1]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>
+                        <li class=""><a href="~/photoprowess/images/demo/gallery/174x150.gif" rel="prettyPhoto[gallery1]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>
+                        <li class="first"><a href="~/photoprowess/images/demo/gallery/174x150.gif" rel="prettyPhoto[gallery1]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>
+                        <li><a href="~/photoprowess/images/demo/gallery/174x150.gif" rel="prettyPhoto[gallery1]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>
+                        <li><a href="~/photoprowess/images/demo/gallery/174x150.gif" rel="prettyPhoto[gallery2]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>
+                        <li><a href="~/photoprowess/images/demo/gallery/174x150.gif" rel="prettyPhoto[gallery2]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>
+                        <li><a href="~/photoprowess/images/demo/gallery/174x150.gif" rel="prettyPhoto[gallery2]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>*@
+                   }
+                </ul>
+            </div>
+
+                        @*<li class="first"><a href="~/photoprowess/images/demo/gallery/174x150.gif" rel="prettyPhoto[gallery1]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>
+     <li class="first"><a href="~/photoprowess/images/demo/gallery/174x150.gif"    rel="prettyPhoto[gallery1]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>
+     <li class="first"><a href="~/photoprowess/images/demo/gallery/174x150.gif"    rel="prettyPhoto[gallery1]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>
+     <li class="first"><a href="~/photoprowess/images/demo/gallery/174x150.gif" rel="prettyPhoto[gallery1]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>
+     <li class="first"><a href="~/photoprowess/images/demo/gallery/174x150.gif" rel="prettyPhoto[gallery1]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>
+     <li class="first"><a href="~/photoprowess/images/demo/gallery/174x150.gif" rel="prettyPhoto[gallery1]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>
+     <li class="first"><a href="~/photoprowess/images/demo/gallery/174x150.gif"    rel="prettyPhoto[gallery1]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>
+     <li class="first"><a href="~/photoprowess/images/demo/gallery/174x150.gif"    rel="prettyPhoto[gallery1]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>
+     <li><a href="~/photoprowess/images/demo/gallery/174x150.gif"    rel="prettyPhoto[gallery1]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>
+    <li><a href="~/photoprowess/images/demo/gallery/174x150.gif"    rel="prettyPhoto[gallery1]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>
+    <li class="first"><a href="~/photoprowess/images/demo/gallery/174x150.gif" rel="prettyPhoto[gallery1]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>
+    <li><a href="~/photoprowess/images/demo/gallery/174x150.gif"    rel="prettyPhoto[gallery1]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>
+    <li><a href="~/photoprowess/images/demo/gallery/174x150.gif"    rel="prettyPhoto[gallery1]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>
+    <li><a href="~/photoprowess/images/demo/gallery/174x150.gif"    rel="prettyPhoto[gallery1]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>
+    <li><a href="~/photoprowess/images/demo/gallery/174x150.gif"    rel="prettyPhoto[gallery1]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/174x150.gif" alt="Extra photo." /></a></li>*@
+                       
+
+
+                        @*<li><a href="~/photoprowess/images/demo/gallery/NotGrandma.jpg" rel="prettyPhoto[gallery1]" title="Custom photo caption appears here. "><img src="~/photoprowess/images/demo/gallery/NotGrandma.jpg" alt="photo of Leta." /></a></li>*@
+
+                        @*<li><a href="~/photoprowess/images/demo/gallery/3.jpg" rel="prettyPhoto[gallery1]" title="Leta"><img src="~/photoprowess/images/demo/gallery/3.jpg" alt="Leta" /></a></li>
+                        <li><a href="~/photoprowess/images/demo/gallery/11.jpg" rel="prettyPhoto[gallery1]" title="Leta"><img src="~/photoprowess/images/demo/gallery/11.jpg" alt="Leta" /></a></li>
+                        <li><a href="~/photoprowess/images/demo/gallery/12.jpg" rel="prettyPhoto[gallery1]" title="Leta"><img src="~/photoprowess/images/demo/gallery/12.jpg" alt="Leta" /></a></li>*@
+
+                        <!--
+                        <li class="first"><a href="../images/demo/gallery/572x330.gif" rel="prettyPhoto[gallery1]" title="Image 5"><img src="../images/demo/gallery/174x150.gif" alt="Title Text" /></a></li>
+                        <li><a href="../images/demo/gallery/572x330.gif" rel="prettyPhoto[gallery1]" title="Image 6"><img src="../images/demo/gallery/174x150.gif" alt="Title Text" /></a></li>
+                        <li><a href="../images/demo/gallery/572x330.gif" rel="prettyPhoto[gallery1]" title="Image 7"><img src="../images/demo/gallery/174x150.gif" alt="Title Text" /></a></li>
+                        <li><a href="../images/demo/gallery/572x330.gif" rel="prettyPhoto[gallery1]" title="Image 8"><img src="../images/demo/gallery/174x150.gif" alt="Title Text" /></a></li>
+                        <li><a href="../images/demo/gallery/572x330.gif" rel="prettyPhoto[gallery1]" title="Image 9"><img src="../images/demo/gallery/174x150.gif" alt="Title Text" /></a></li>
+                        -->
+
+                
+                @*<p style="color:black;font-weight:bold;text-align: center;font-size:medium;"> Include a Person description here for @ViewBag.Person @ViewBag.Description </p>*@
+                
+                <!--
+                <li class="first"><a href="../images/demo/gallery/572x330.gif" rel="prettyPhoto[gallery1]" title="Image 10"><img src="../images/demo/gallery/174x150.gif" alt="Title Text" /></a></li>
+                <li><a href="../images/demo/gallery/572x330.gif" rel="prettyPhoto[gallery1]" title="Image 11"><img src="../images/demo/gallery/174x150.gif" alt="Title Text" /></a></li>
+                <li><a href="../images/demo/gallery/572x330.gif" rel="prettyPhoto[gallery1]" title="Image 12"><img src="../images/demo/gallery/174x150.gif" alt="Title Text" /></a></li>
+                <li><a href="../images/demo/gallery/572x330.gif" rel="prettyPhoto[gallery1]" title="Image 13"><img src="../images/demo/gallery/174x150.gif" alt="Title Text" /></a></li>
+                <li><a href="../images/demo/gallery/572x330.gif" rel="prettyPhoto[gallery1]" title="Image 14"><img src="../images/demo/gallery/174x150.gif" alt="Title Text" /></a></li>
+                -->
+                @*</ul>*@
+            
+
+             <!--
+
+            <p style="color:Firebrick;font-weight:bold;font-size:125%;">Additional @ViewBag.Person Artifacts, photos, movies etc may appear below </p><br />
+            <div class="gallery clear">
+                <ul>
+                    <li class="first"><img style="border:15px;" src="~/photoprowess/images/demo/gallery/572x330.gif" width="286" height="165" alt="Title Text" /></li>
+                    <li><a href="../images/demo/gallery/LetaFather.jpg" rel="prettyPhoto[gallery2]" title="Replace this with another photo of Leta's Sire. "><img src="../images/demo/gallery/LetaFather.jpg" alt="Leta's Sire." /></a></li>
+                    <li><a href="../images/demo/gallery/LetaFather.jpg" rel="prettyPhoto[gallery2]" title="Replace this with another photo of Leta's Sire."><img src="../images/demo/gallery/LetaFather.jpg" alt="Leta's Sire." /></a></li>
+                    
+                    <div style="border:5px;margin-left: auto;margin-right: auto;width: 25em;color:black;font-weight:bold;font-size:125%;"> Specific text describing @ViewBag.Person artifact at left.  More text regarding @ViewBag.Person artifact at left.   More descriptive text... </div>
+                    
+            </div>
+            -->
+
+            <!--
+            <p style="color:Firebrick;font-weight:bold;font-size:125%;">Another @ViewBag.Person photo could appear here </p>
+            <div class="gallery clear">
+                <ul>
+                    <li class="first"><img style="padding: 8px;" src="~/photoprowess/images/demo/gallery/572x330.gif" width="286" height="165" alt="Title Text" /></li>
+                    <!--
+                    <li><a href="../images/demo/gallery/LetaMother.jpg" rel="prettyPhoto[gallery3]" title="Replace this with another photo of Leta's Dame. "><img src="../images/demo/gallery/LetaMother.jpg" alt="Leta's Dame." /></a></li>
+                    <li><a href="../images/demo/gallery/LetaMother.jpg" rel="prettyPhoto[gallery3]" title="Replace this with another photo of Leta's Dame. "><img src="../images/demo/gallery/LetaMother.jpg" alt="Leta's Dame." /></a></li>
+                    
+                    <div style="margin-left: auto;margin-right: auto;width: 25em;color:black;font-weight:bold;font-size:125%;"> Text regarding @ViewBag.Person.  More text regarding @ViewBag.Person.   More text regarding @ViewBag.Person. </div>
+            </div>
+            -->
+
+            <!-- ####################################################################################################### -->
+            <!--
+            <div class="pagination">
+              <ul>
+                <li class="prev"><a href="#">&laquo; Previous</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li class="splitter">&hellip;</li>
+                <li><a href="#">6</a></li>
+                <li class="current">7</li>
+                <li><a href="#">8</a></li>
+                <li><a href="#">9</a></li>
+                <li class="splitter">&hellip;</li>
+                <li><a href="#">14</a></li>
+                <li><a href="#">15</a></li>
+                <li class="next"><a href="#">Next &raquo;</a></li>
+              </ul>
+            </div>
+            -->
+            <!-- ####################################################################################################### -->
+            <div class="clear"> </div>
+        </div>
+    </div>
+
+
+    <!-- ####################################################################################################### -->
+    @*<div class="wrapper">
+        <div id="copyright" class="clear">
+            <p class="fl_left">Copyright &copy; 2014 - All Rights Reserved - <a href="#">Domain Name</a></p>
+            <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+        </div>
+    </div>
+    </div>*@
+    @*</div>*@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="wrapper col6">
+        <div id="copyright">
+            <p class="fl_left">Site design by Joe Boman 2015 - ASP.Net, MVC4, SQL Server / LINQ, Razor Server side markup, HTML, CSS <a href="#">Bomanclan.com</a></p>
+            <!--	<p class="fl_left">Copyright &copy; 2014 - All Rights Reserved - <a href="#">CatsOnTheWildSide.com</a></p> -->
+            <!--   <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>  -->
+            <br class="clear" />
+        </div>
+    </div>
+
+
+
+
+    @section extraLinks {
+        <link rel="stylesheet" href="~/photoprowess/layout/styles/layout.css" type="text/css" />
+        <script type="text/javascript" src="~/photoprowess/layout/scripts/jquery.min.js"></script>
+        <script type="text/javascript" src="~/photoprowess/layout/scripts/jquery.ui.min.js"></script>
+        <script type="text/javascript" src="~/photoprowess/layout/scripts/jquery.defaultvalue.js"></script>
+        <script type="text/javascript" src="~/photoprowess/layout/scripts/jquery.scrollTo-min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#fullname, #validemail, #message").defaultvalue("Full Name", "Email Address", "Message");
+                $('#shout a').click(function () {
+                    var to = $(this).attr('href');
+                    $.scrollTo(to, 1200);
+                    return false;
+                });
+                $('a.topOfPage').click(function () {
+                    $.scrollTo(0, 1200);
+                    return false;
+                });
+                $("#tabcontainer").tabs({
+                    event: "click"
+                });
+                $("a[rel^='prettyPhoto']").prettyPhoto({
+                    theme: 'dark_rounded'
+                });
+            });
+        </script>
+        <!-- prettyPhoto -->
+        <link rel="stylesheet" href="~/photoprowess/layout/scripts/prettyphoto/prettyPhoto.css" type="text/css" />
+        <script type="text/javascript" src="~/photoprowess/layout/scripts/prettyphoto/jquery.prettyPhoto.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("a[rel^='prettyPhoto']").prettyPhoto({
+                    theme: 'dark_rounded',
+                    overlay_gallery: false,
+                    social_tools: false
+                });
+            });
+        </script>
+        <!-- / prettyPhoto -->
+    }

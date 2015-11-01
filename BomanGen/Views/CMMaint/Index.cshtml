@@ -1,0 +1,82 @@
+﻿@model IEnumerable<BomanGen.Models.Artifact>
+
+@{
+    ViewBag.Title = "Content Management Home Screen";
+}
+
+@if (TempData["ReturnData"] != null)
+{
+    var joemodel = TempData["ReturnData"];
+    <h2 class="pettigoat_blue"> @joemodel  </h2>
+}
+else
+{
+    //var joemodel = @:&nbsp;
+    <h2 class="pettigoat_blue"> @*&nbsp*@ </h2>
+    <h3>         
+        To upload and add a new photo to the site: First click the Add a new Artifact(photo etc.) link near the top of this screen.  
+        After uploading, return to this Content Management Home Page screen, find your photo or any photo on this screen. 
+        Then choose the "Associate this file with specific Persons" option. 
+        Your photo will then appear when you click on those Persons on the Family Tree.
+    </h3>
+}
+
+<hr />
+<hr />
+
+@{string ThumbNailFilePath;}
+
+@foreach (var item in Model)
+{
+
+    <h6> FILENAME: @item.FileName  </h6>
+
+
+    @*<div class="editor-label">
+            @Html.LabelFor(model => @item.PhotoDescription)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => @item.PhotoDescription)
+            @Html.ValidationMessageFor(model => @item.PhotoDescription)
+        </div>*@
+
+    //ThumbNailFilePath = "/images/demo/gallery/ThumbSize";
+    ThumbNailFilePath = "/photoprowess/images/demo/gallery/ThumbSize" + @item.FileName;
+    <img src="@ThumbNailFilePath" alt="Photo Missing" width="200" height="200" />
+
+    <h6> CAPTION: @item.Description </h6>
+    @Html.ActionLink("Update Caption Above", "Update", "CMMaint", new { fileName = @item.FileName  @*@item.PhotoNumberID*@ }, htmlAttributes: null)
+    <br /><br />
+    @Html.ActionLink("Delete Photo including Caption", "DeleteArtifact", "CMMaint", new { fileName = @item.FileName }, htmlAttributes: null)
+    <br /><br />
+    @Html.ActionLink("Associate this file with specific Persons", "FileAssociate", "CMMaint", new { fileName = @item.FileName }, htmlAttributes: null)
+    @*@Html.ActionLink("Delete Photo including Caption", "Delete", "CMAdmin", new { id = @item.PhotoNumberID }, htmlAttributes: null)*@
+    <hr />
+
+    //    <li> <a rel="gallery_group" href=@Url.Action(@item.Filename,"images/demo/gallery") title="@item.PhotoDescription"> <img src="@ThumbNailFilePath" alt="Photo Missing" /> </a> </li>
+    //@ThumbNailFilePath
+    //    <li class="last"> <a rel="gallery_group" href=@Url.Action(@item.Filename,"images/demo/gallery") title="@item.PhotoDescription"> <img src=@ThumbNailFilePath alt="Photo Missing" /> </a> </li>
+
+}
+
+@section CMHeaderLinks {
+    <hr />
+    <h2>@ViewBag.Title</h2>
+    @Html.ActionLink("Add a new Artifact(photo etc.)", "CreateArtifact", "CMMaint")
+    <br />
+    @Html.ActionLink("Back to Content Management Home Page", "Index")
+    <br />
+    @Html.ActionLink("Site Home Page", "Index", "Home")
+}
+
+@section CMFooterLinks {
+
+    <h6>Content Mgmt. Maintenance Footer:  Additional Links below</h6>
+    <hr />
+    <hr />
+    @Html.ActionLink("Add a new Artifact(photo etc.)", "CreateArtifact", "CMMaint")
+    <br />
+    @Html.ActionLink("Back to Content Management Home Page", "Index")
+    <br />
+    @Html.ActionLink("Site Home Page", "Index", "Home")
+}

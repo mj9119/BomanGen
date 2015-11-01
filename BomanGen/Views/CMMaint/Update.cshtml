@@ -1,0 +1,98 @@
+﻿@model BomanGen.Models.Artifact
+
+@{
+    ViewBag.Title = "Content Management Photo Caption Update Screen";
+}
+
+
+<h3>Filename: @Session["currentFileProcessed"]</h3>
+@{string ThumbNailFilePath = "/photoprowess/images/demo/gallery/ThumbSize" + @Session["currentFileProcessed"];}
+@*ThumbNailFilePath = "/photoprowess/images/demo/gallery/" + @item.FileName;*@
+@*ThumbNailFilePath = += @Session["myVar"];*@
+<img src="@ThumbNailFilePath" alt="Photo Missing" width="200" height="200" />
+
+
+@using (Html.BeginForm("Update", "CMMaint"))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Artifact</legend>
+        @{string myFilename = @Model.FileName;}
+        @{string colonString = ":";}
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FileName)
+            @colonString
+            @Html.Hidden("Filename", @Model.FileName)
+            @Html.DisplayFor(model => model.FileName)
+            <br />
+            @Html.ValidationMessageFor(model => model.FileName)
+        </div>        
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+            @colonString
+            @Html.Hidden("Name", @Model.Name)
+            @Html.DisplayFor(model => model.Name)
+            <br />
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ArtifactType)
+            @colonString
+            @Html.Hidden("ArtifactType", @Model.ArtifactType)
+            @Html.DisplayFor(model => model.ArtifactType)
+            <br />
+            @Html.ValidationMessageFor(model => model.ArtifactType)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.HeadStone)
+            @colonString
+            @Html.Hidden("HeadStone", @Model.HeadStone)
+            @Html.DisplayFor(model => model.HeadStone)
+            <br />
+            @Html.ValidationMessageFor(model => model.ArtifactType)            
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Description )
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Description)
+            @Html.ValidationMessageFor(model => model.Description)
+        </div>
+
+        @*@{int testInt = 123;}
+            @Html.ActionLink("Update Caption", "Update", "CMAdmin", new { id = testInt }, htmlAttributes: null)*@
+        @*@Html.ActionLink("Update This Caption", "Update", "CMAdmin")*@
+        <p>
+            <input type="submit" value="Update Caption" />
+        </p>
+    </fieldset>
+}
+
+@section CMHeaderLinks {
+    <hr />
+    <h2>@ViewBag.Title</h2>
+    @Html.ActionLink("Add a new Artifact(photo etc.)", "CreateArtifact", "CMMaint")
+    <br />
+    @Html.ActionLink("Back to Content Management Home Page", "Index")
+    <br />
+    @Html.ActionLink("Site Home Page", "Index", "Home")
+}
+
+@section CMFooterLinks {
+
+    <h6>Content Mgmt. Maintenance Footer:  Additional Links below</h6>
+    <hr />
+    <hr />
+    @Html.ActionLink("Add a new Artifact(photo etc.)", "CreateArtifact", "CMMaint")
+    <br />
+    @Html.ActionLink("Back to Content Management Home Page", "Index")
+    <br />
+    @Html.ActionLink("Site Home Page", "Index", "Home")
+}

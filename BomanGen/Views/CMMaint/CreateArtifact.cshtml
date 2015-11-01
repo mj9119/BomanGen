@@ -1,0 +1,69 @@
+﻿@*@model IEnumerable<BomanGen.Models.Artifact>*@
+
+@model BomanGen.Models.Artifact          
+
+@{
+    ViewBag.Title = "Content Management Create New Photo Screen";
+}
+
+<h3>
+    To upload and add a new photo to the site: First click the Browse button below and select a Photo.  
+    Optionally, you can include a Caption for the photo.  
+    Then, click the Upload Photo button.  
+    After uploading, choose the ""Content Management Home Page" link near the top of the screen and Associate each file with Persons.
+</h3>
+
+@using (Html.BeginForm("CreateArtifact", "CMMaint", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Gallery</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FileName)
+        </div>
+        <div class="editor-field">
+            @*<input type="file" name="file" id="file" />*@
+            @Html.TextBox("file", "", new { type = "file" })
+            @*@Html.EditorFor(model => model.Filename)
+                <br />
+                @Html.ValidationMessageFor(model => model.Filename)*@
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Description)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Description)
+            @Html.ValidationMessageFor(model => model.Description)
+        </div>
+
+        <p>
+            <input type="submit" value="Upload Photo" />
+        </p>
+    </fieldset>
+}
+
+@section CMHeaderLinks {
+    <hr />
+    <h2>@ViewBag.Title</h2>
+    @Html.ActionLink("Add a new Artifact(photo etc.)", "CreateArtifact", "CMMaint")
+    <br />
+    @Html.ActionLink("Back to Content Management Home Page", "Index")
+    <br />
+    @Html.ActionLink("Site Home Page", "Index", "Home")
+}
+
+@section CMFooterLinks {
+
+    <h6>Content Mgmt. Maintenance Footer:  Additional Links below</h6>
+    <hr />
+    <hr />
+    @Html.ActionLink("Add a new Artifact(photo etc.)", "CreateArtifact", "CMMaint")
+    <br />
+    @Html.ActionLink("Back to Content Management Home Page", "Index")
+    <br />
+    @Html.ActionLink("Site Home Page", "Index", "Home")
+}
