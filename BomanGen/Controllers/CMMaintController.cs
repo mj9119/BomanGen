@@ -214,7 +214,7 @@ namespace BomanGen.Controllers
 
             TempData["ReturnData"] = "Photo was successfully updated";
             return RedirectToAction("Index");
-            return View(artifact);
+            //return View(artifact);
         }
 
         

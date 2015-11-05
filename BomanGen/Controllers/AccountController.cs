@@ -59,10 +59,9 @@ namespace BomanGen.Controllers
         
         //
         // GET: /Account/Register
-
         
         //[AllowAnonymous]
-        
+        /*
         // Three administrative Users are authorized to create new login accounts.  
         // They are: 
         // AdminA, Boman admin (AdminB), and Whelehon admin (AdminW) 
@@ -71,10 +70,11 @@ namespace BomanGen.Controllers
         {
             return View();
         }
+        */
 
         //
         // POST: /Account/Register
-
+        /*
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
@@ -98,7 +98,7 @@ namespace BomanGen.Controllers
             // If we got this far, something failed, redisplay form
             return View(model);
         }
-
+        */
 
         //       
         // POST: /Account/Change Password
@@ -124,7 +124,7 @@ namespace BomanGen.Controllers
 
         //
         // POST: /Account/Disassociate
-
+        /*
         [HttpPost]
         //[ValidateAntiForgeryToken]
         public ActionResult Disassociate(string provider, string providerUserId)
@@ -150,6 +150,7 @@ namespace BomanGen.Controllers
 
             return RedirectToAction("Manage", new { Message = message });
         }
+        */
 
         //
         // GET: /Account/Manage
@@ -231,7 +232,7 @@ namespace BomanGen.Controllers
 
         //
         // POST: /Account/ExternalLogin
-
+        /*
         [HttpPost]
         [AllowAnonymous]
         //[ValidateAntiForgeryToken]
@@ -242,7 +243,9 @@ namespace BomanGen.Controllers
 
         //
         // GET: /Account/ExternalLoginCallback
+         */
 
+        /*
         [AllowAnonymous]
         public ActionResult ExternalLoginCallback(string returnUrl)
         {
@@ -272,10 +275,11 @@ namespace BomanGen.Controllers
                 return View("ExternalLoginConfirmation", new RegisterExternalLoginModel { UserName = result.UserName, ExternalLoginData = loginData });
             }
         }
+        */
 
         //
         // POST: /Account/ExternalLoginConfirmation
-
+        /*
         [HttpPost]
         [AllowAnonymous]
         //[ValidateAntiForgeryToken]
@@ -318,16 +322,20 @@ namespace BomanGen.Controllers
             ViewBag.ReturnUrl = returnUrl;
             return View(model);
         }
+        */
+
 
         //
         // GET: /Account/ExternalLoginFailure
-
+        /*
         [AllowAnonymous]
         public ActionResult ExternalLoginFailure()
         {
             return View();
         }
+        */
 
+        /*
         [AllowAnonymous]
         [ChildActionOnly]
         public ActionResult ExternalLoginsList(string returnUrl)
@@ -335,7 +343,9 @@ namespace BomanGen.Controllers
             ViewBag.ReturnUrl = returnUrl;
             return PartialView("_ExternalLoginsListPartial", OAuthWebSecurity.RegisteredClientData);
         }
+        */
 
+        /*
         [ChildActionOnly]
         public ActionResult RemoveExternalLogins()
         {
@@ -356,6 +366,7 @@ namespace BomanGen.Controllers
             ViewBag.ShowRemoveButton = externalLogins.Count > 1 || OAuthWebSecurity.HasLocalAccount(WebSecurity.GetUserId(User.Identity.Name));
             return PartialView("_RemoveExternalLoginsPartial", externalLogins);
         }
+         */
 
         #region Helpers
         private ActionResult RedirectToLocal(string returnUrl)
@@ -377,6 +388,8 @@ namespace BomanGen.Controllers
             RemoveLoginSuccess,
         }
 
+
+        /*
         internal class ExternalLoginResult : ActionResult
         {
             public ExternalLoginResult(string provider, string returnUrl)
@@ -393,6 +406,7 @@ namespace BomanGen.Controllers
                 OAuthWebSecurity.RequestAuthentication(Provider, ReturnUrl);
             }
         }
+        */
 
         private static string ErrorCodeToString(MembershipCreateStatus createStatus)
         {
